@@ -12,7 +12,7 @@ let data = []
 let i = 0
 
 // reading ndjson file
-fs.createReadStream('cat.ndjson')
+fs.createReadStream('https://storage.googleapis.com/quickdraw_dataset/full/raw/cat.ndjson')
   .pipe(ndjson.parse())
   .on('data', function(obj) {
     data.push(obj)
